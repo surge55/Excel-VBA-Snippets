@@ -1,0 +1,11 @@
+'The procedure will hide the names of all named ranges in a workbook.
+'Useful for hiding name ranges when you zoom out past 40%, Excel automatically shows the names of named ranges
+'To turn back on change iName.Visible to True
+
+Sub Hide_Names()
+Dim iName As Name
+
+For Each iName In ThisWorkbook.Names
+        iName.Visible = False
+Next iName
+End Sub
